@@ -1,6 +1,6 @@
 - 👋 Hi, I’m @YRKR9
 - 👀 I’m interested in coding
-- 🌱 I’m currently learning C++
+- 🌱 I’m currently learning Scala and MongoDB
 - 💞️ I’m looking to collaborate on any project that needs a fresher
 - 📫 You can reach me 24/7 through yravikiranreddy9@gmail.com
 
