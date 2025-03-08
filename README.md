@@ -1,8 +1,8 @@
-- 👋 Hi, I’m @YRKR9
-- 👀 I’m interested in coding
-- 🌱 I’m currently learning Scala and MongoDB
-- 💞️ I’m looking to collaborate on any project that needs a fresher
-- 📫 You can reach me 24/7 through yravikiranreddy9@gmail.com
+- 👋 Hi, I’m Kiran
+- 👀 I’m interested in Data Engineering & Software development
+- 🌱 I’m currently learning DSA using Python & SQL
+- 💞️ I’m looking to switch to a more challenging job that pushes me level up constantly
+- 📫 You can reach me through yravikiranreddy9@gmail.com
 
 <!---
 YRKR9/YRKR9 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
