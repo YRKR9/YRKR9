@@ -1,6 +1,6 @@
 - 👋 Hi, I’m Kiran
 - 👀 I’m interested in Data Engineering & Software development
-- 🌱 I’m currently learning DSA using Python & SQL
+- 🌱 I’m currently learning Azure
 - 💞️ I’m looking to switch to a more challenging job that pushes me level up constantly
 - 📫 You can reach me through yravikiranreddy9@gmail.com
 
