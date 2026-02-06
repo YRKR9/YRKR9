@@ -245,7 +245,7 @@
 										{
 											"name": "max_val",
 											"value": {
-												"value": "@activity('get_maxtime').output.resultSets[0].row[0].max_val",
+												"value": "@activity('max_watermark').output.resultSets[0].rows[0].max_val",
 												"type": "Expression"
 											}
 										}
