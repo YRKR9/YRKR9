@@ -32,7 +32,7 @@
 					"source": {
 						"type": "AzureSqlSource",
 						"sqlReaderQuery": {
-							"value": "SELECT * FROM @{pipeline().parameters.schema}.@{pipeline().parameters.table}\nWHERE @{pipeline().parameters.watermark_col} > '@{activity('get_maxtime').output.value[0].cdc}'",
+							"value": "SELECT * FROM @{pipeline().parameters.schema}.@{pipeline().parameters.table}\nWHERE @{pipeline().parameters.watermark_col} > '@{activity('get_maxtime').output.value[0].max_watermark}'",
 							"type": "Expression"
 						},
 						"queryTimeout": "00:20:00",
@@ -172,7 +172,14 @@
 				"type": "Copy",
 				"state": "Inactive",
 				"onInactiveMarkAs": "Succeeded",
-				"dependsOn": [],
+				"dependsOn": [
+					{
+						"activity": "max_watermark",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
 				"policy": {
 					"timeout": "0.12:00:00",
 					"retry": 0,
@@ -188,7 +195,7 @@
 							{
 								"name": "max_val",
 								"value": {
-									"value": "@activity('max_watermark').output.resultSets[0].rows[0].cdc",
+									"value": "@activity('get_maxtime').output.resultSets[0].row[0].max_val",
 									"type": "Expression"
 								}
 							}
@@ -219,10 +226,7 @@
 						"type": "DatasetReference",
 						"parameters": {
 							"container": "bronze",
-							"folder": {
-								"value": "cdc",
-								"type": "Expression"
-							},
+							"folder": "cdc",
 							"file": "empty.json"
 						}
 					}
